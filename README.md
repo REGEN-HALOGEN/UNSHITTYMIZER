@@ -76,7 +76,7 @@
 ### Option 2: Local Development
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/UNSHITTYMIZER.git
+   git clone https://github.com/REGEN-HALOGEN/UNSHITTYMIZER.git
    cd UNSHITTYMIZER
    ```
 2. Open with VS Code and use Live Server extension for development
@@ -193,20 +193,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Package manager dependencies for application installation
 
 ### Planned Features:
-- [ ] Windows 10 compatibility
-- [ ] Real-time script execution
+- [ ] More Optimisation Scripts
+- [ ] AI Assited Suggestions
 - [ ] Configuration import/export
-- [ ] Advanced system monitoring
-- [ ] Multi-language support
+- [ ] Automatic System Spec Detection
+- [ ] Optimisation Tips thread
 
 ## 📞 **Support**
 
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/REGEN-HALOGEN/UNSHITTYMIZER/issues)
 - 💡 **Feature Requests**: [GitHub Discussions](https://github.com/REGEN-HALOGEN/UNSHITTYMIZER/discussions)
-- 📧 **Contact**: your.email@example.com
+- 📧 **Contact**: ashhhwin2003@gmail.com
 
 ---
 
 **⚠️ Disclaimer**: This tool modifies Windows system settings. Use at your own risk. Always create backups before making system changes. The authors are not responsible for any system damage or data loss.
 
-**Made with ❤️**
+**Made with ❤️ by REGEN-HALOGEN**
