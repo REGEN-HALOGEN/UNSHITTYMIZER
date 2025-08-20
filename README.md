@@ -201,12 +201,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 **Support**
 
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/yourusername/UNSHITTYMIZER/issues)
-- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/yourusername/UNSHITTYMIZER/discussions)
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/REGEN-HALOGEN/UNSHITTYMIZER/issues)
+- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/REGEN-HALOGEN/UNSHITTYMIZER/discussions)
 - 📧 **Contact**: your.email@example.com
 
 ---
 
 **⚠️ Disclaimer**: This tool modifies Windows system settings. Use at your own risk. Always create backups before making system changes. The authors are not responsible for any system damage or data loss.
 
-**Made with ❤️ for the Windows optimization community**
+**Made with ❤️**
