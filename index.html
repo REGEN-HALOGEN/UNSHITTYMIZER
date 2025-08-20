@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNSHITTYMIZER V3 - Professional Windows Optimization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1 class="app-title">UNSHITTYMIZER V3</h1>
+            <p class="app-subtitle">Professional Windows 11 Optimization & Application Installer</p>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="system-specs">
+                <span class="tab-icon">🖥️</span>
+                System Specification
+            </button>
+            <button class="tab-btn" data-tab="optimization-scripts">
+                <span class="tab-icon">⚡</span>
+                Optimization Scripts
+            </button>
+            <button class="tab-btn" data-tab="app-selection">
+                <span class="tab-icon">📦</span>
+                Application Selection
+            </button>
+            <button class="tab-btn" data-tab="finalization">
+                <span class="tab-icon">✅</span>
+                Finalization
+            </button>
+        </nav>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 25%"></div>
+        </div>
+
+        <!-- Tab Content -->
+        <main class="tab-content">
+            <!-- System Specification Tab -->
+            <section id="system-specs" class="tab-pane active">
+                <div class="tab-header">
+                    <h2>System Specification</h2>
+                    <p>Configure your hardware specifications for optimized recommendations</p>
+                </div>
+
+                <div class="system-config-grid">
+                    <!-- CPU Configuration -->
+                    <div class="config-card">
+                        <h3>CPU Processor</h3>
+                        <div class="form-group">
+                            <label class="form-label" for="cpu-select">Select CPU</label>
+                            <select id="cpu-select" class="form-control">
+                                <option value="">Choose CPU...</option>
+                                <option value="intel-i3-12100">Intel i3-12100 (Budget)</option>
+                                <option value="intel-i5-12600k">Intel i5-12600K (Mainstream)</option>
+                                <option value="intel-i7-12700k">Intel i7-12700K (High-End)</option>
+                                <option value="intel-i9-12900k">Intel i9-12900K (Enthusiast)</option>
+                                <option value="amd-ryzen5-5600x">AMD Ryzen 5 5600X (Mainstream)</option>
+                                <option value="amd-ryzen7-5800x">AMD Ryzen 7 5800X (High-End)</option>
+                                <option value="amd-ryzen9-5900x">AMD Ryzen 9 5900X (Enthusiast)</option>
+                            </select>
+                            <div id="cpu-performance" class="performance-display">
+                                <span class="performance-score">Performance Score: --</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GPU Configuration -->
+                    <div class="config-card">
+                        <h3>Graphics Card</h3>
+                        <div class="form-group">
+                            <label class="form-label" for="gpu-select">Select GPU</label>
+                            <select id="gpu-select" class="form-control">
+                                <option value="">Choose GPU...</option>
+                                <option value="nvidia-rtx4090">NVIDIA RTX 4090 (Tier S)</option>
+                                <option value="nvidia-rtx4070">NVIDIA RTX 4070 (Tier A)</option>
+                                <option value="nvidia-rtx3060">NVIDIA RTX 3060 (Tier B)</option>
+                                <option value="amd-rx7900xt">AMD RX 7900 XT (Tier A)</option>
+                                <option value="amd-rx6600xt">AMD RX 6600 XT (Tier B)</option>
+                                <option value="integrated">Integrated Graphics (Tier D)</option>
+                            </select>
+                            <div id="gpu-performance" class="performance-display">
+                                <span class="performance-score">Tier Rating: --</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RAM Configuration -->
+                    <div class="config-card">
+                        <h3>System Memory</h3>
+                        <div class="form-group">
+                            <label class="form-label" for="ram-select">Select RAM Amount</label>
+                            <select id="ram-select" class="form-control">
+                                <option value="">Choose RAM...</option>
+                                <option value="8gb">8GB (Minimum)</option>
+                                <option value="16gb">16GB (Recommended)</option>
+                                <option value="32gb">32GB (High-End)</option>
+                                <option value="64gb">64GB (Enthusiast)</option>
+                                <option value="128gb">128GB+ (Professional)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Storage Configuration -->
+                    <div class="config-card">
+                        <h3>Primary Storage</h3>
+                        <div class="form-group">
+                            <label class="form-label">SSD Storage</label>
+                            <div class="toggle-group">
+                                <input type="radio" id="ssd-yes" name="ssd" value="yes">
+                                <label for="ssd-yes" class="toggle-option">Yes (Faster Install)</label>
+                                <input type="radio" id="ssd-no" name="ssd" value="no">
+                                <label for="ssd-no" class="toggle-option">No (HDD)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Device Type Configuration -->
+                    <div class="config-card">
+                        <h3>Device Type</h3>
+                        <div class="form-group">
+                            <label class="form-label">System Type</label>
+                            <div class="toggle-group">
+                                <input type="radio" id="desktop" name="device-type" value="desktop">
+                                <label for="desktop" class="toggle-option">Desktop PC</label>
+                                <input type="radio" id="laptop" name="device-type" value="laptop">
+                                <label for="laptop" class="toggle-option">Laptop</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hardware Performance Card -->
+                <div class="performance-card">
+                    <h3>System Performance Overview</h3>
+                    <div id="system-tier" class="system-tier">
+                        <div class="tier-badge">Configure Hardware Above</div>
+                    </div>
+                    <div id="hardware-summary" class="hardware-summary">
+                        <p>Select your hardware components to see performance analysis</p>
+                    </div>
+                </div>
+
+                <div class="tab-actions">
+                    <button class="btn btn--primary" onclick="nextTab('optimization-scripts')">
+                        Next: Optimization Scripts →
+                    </button>
+                </div>
+            </section>
+
+            <!-- Optimization Scripts Tab -->
+            <section id="optimization-scripts" class="tab-pane">
+                <div class="tab-header">
+                    <h2>Optimization Scripts</h2>
+                    <p>Choose your optimization approach and select scripts</p>
+                </div>
+
+                <!-- Mode Selection -->
+                <div class="mode-selection">
+                    <h3>Recommendation Mode</h3>
+                    <div class="mode-toggle">
+                        <input type="radio" id="ai-mode" name="rec-mode" value="ai" checked>
+                        <label for="ai-mode" class="mode-option">
+                            <span class="mode-icon">🤖</span>
+                            <span class="mode-title">AI-Assisted Script Recommendations</span>
+                            <span class="mode-desc">Automatic recommendations based on your system specs</span>
+                        </label>
+                        <input type="radio" id="manual-mode" name="rec-mode" value="manual">
+                        <label for="manual-mode" class="mode-option">
+                            <span class="mode-icon">⚙️</span>
+                            <span class="mode-title">Manual Script Selection</span>
+                            <span class="mode-desc">Full manual control over script selection</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Script Categories -->
+                <div class="script-categories">
+                    <!-- Essential Scripts -->
+                    <div class="script-category">
+                        <div class="category-header">
+                            <h3>Essential Optimizations</h3>
+                            <span class="category-badge low-risk">Low Risk</span>
+                        </div>
+                        <div class="script-grid">
+                            <div class="script-card" data-script="disable-telemetry">
+                                <div class="script-header">
+                                    <h4>Disable Windows Telemetry</h4>
+                                    <div class="script-badges">
+                                        <span class="risk-badge low">Low</span>
+                                        <span id="rec-telemetry" class="rec-badge yes">Yes</span>
+                                    </div>
+                                </div>
+                                <p>Disables data collection and telemetry services for better privacy</p>
+                                <div class="script-meta">
+                                    <span class="exec-time">~30 seconds</span>
+                                    <span class="script-type">Registry</span>
+                                </div>
+                                <div class="script-actions">
+                                    <input type="checkbox" id="script-telemetry" class="script-checkbox">
+                                    <button class="btn btn--outline btn--sm reveal-btn" data-target="code-telemetry">
+                                        Reveal Code
+                                    </button>
+                                </div>
+                                <div id="code-telemetry" class="code-preview hidden">
+                                    <pre><code>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="script-card" data-script="remove-bloatware">
+                                <div class="script-header">
+                                    <h4>Remove Pre-installed Apps</h4>
+                                    <div class="script-badges">
+                                        <span class="risk-badge low">Low</span>
+                                        <span id="rec-bloatware" class="rec-badge yes">Yes</span>
+                                    </div>
+                                </div>
+                                <p>Removes unnecessary Microsoft Store apps and bloatware</p>
+                                <div class="script-meta">
+                                    <span class="exec-time">~2 minutes</span>
+                                    <span class="script-type">PowerShell</span>
+                                </div>
+                                <div class="script-actions">
+                                    <input type="checkbox" id="script-bloatware" class="script-checkbox">
+                                    <button class="btn btn--outline btn--sm reveal-btn" data-target="code-bloatware">
+                                        Reveal Code
+                                    </button>
+                                </div>
+                                <div id="code-bloatware" class="code-preview hidden">
+                                    <pre><code>Get-AppxPackage *3dbuilder* | Remove-AppxPackage
+Get-AppxPackage *windowsalarms* | Remove-AppxPackage
+Get-AppxPackage *windowscamera* | Remove-AppxPackage
+Get-AppxPackage *officehub* | Remove-AppxPackage</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Performance Scripts -->
+                    <div class="script-category">
+                        <div class="category-header">
+                            <h3>Performance Optimizations</h3>
+                            <span class="category-badge medium-risk">Medium Risk</span>
+                        </div>
+                        <div class="script-grid">
+                            <div class="script-card" data-script="gaming-mode">
+                                <div class="script-header">
+                                    <h4>Gaming Mode Optimization</h4>
+                                    <div class="script-badges">
+                                        <span class="risk-badge medium">Medium</span>
+                                        <span id="rec-gaming" class="rec-badge">Auto</span>
+                                    </div>
+                                </div>
+                                <p>Optimizes system priorities and settings for gaming performance</p>
+                                <div class="script-meta">
+                                    <span class="exec-time">~45 seconds</span>
+                                    <span class="script-type">Registry</span>
+                                </div>
+                                <div class="script-actions">
+                                    <input type="checkbox" id="script-gaming" class="script-checkbox">
+                                    <button class="btn btn--outline btn--sm reveal-btn" data-target="code-gaming">
+                                        Reveal Code
+                                    </button>
+                                </div>
+                                <div id="code-gaming" class="code-preview hidden">
+                                    <pre><code>reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games" /v Priority /t REG_DWORD /d 6 /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games" /v "GPU Priority" /t REG_DWORD /d 8 /f</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="script-card" data-script="power-optimization">
+                                <div class="script-header">
+                                    <h4>Power Plan Optimization</h4>
+                                    <div class="script-badges">
+                                        <span class="risk-badge low">Low</span>
+                                        <span id="rec-power" class="rec-badge">Auto</span>
+                                    </div>
+                                </div>
+                                <p>Configures optimal power settings based on your device type</p>
+                                <div class="script-meta">
+                                    <span class="exec-time">~15 seconds</span>
+                                    <span class="script-type">Command</span>
+                                </div>
+                                <div class="script-actions">
+                                    <input type="checkbox" id="script-power" class="script-checkbox">
+                                    <button class="btn btn--outline btn--sm reveal-btn" data-target="code-power">
+                                        Reveal Code
+                                    </button>
+                                </div>
+                                <div id="code-power" class="code-preview hidden">
+                                    <pre><code>powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+powercfg -setactive e9a42b02-d5df-448d-aa00-03f14749eb61</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Scripts -->
+                    <div class="script-category">
+                        <div class="category-header">
+                            <h3>Advanced Optimizations</h3>
+                            <span class="category-badge high-risk">High Risk</span>
+                        </div>
+                        <div class="script-grid">
+                            <div class="script-card" data-script="network-tweaks">
+                                <div class="script-header">
+                                    <h4>Advanced Network Tweaks</h4>
+                                    <div class="script-badges">
+                                        <span class="risk-badge high">High</span>
+                                        <span id="rec-network" class="rec-badge no">No</span>
+                                    </div>
+                                </div>
+                                <p>Advanced TCP/IP and network stack optimizations</p>
+                                <div class="script-meta">
+                                    <span class="exec-time">~1 minute</span>
+                                    <span class="script-type">Registry</span>
+                                </div>
+                                <div class="script-actions">
+                                    <input type="checkbox" id="script-network" class="script-checkbox">
+                                    <button class="btn btn--outline btn--sm reveal-btn" data-target="code-network">
+                                        Reveal Code
+                                    </button>
+                                </div>
+                                <div id="code-network" class="code-preview hidden">
+                                    <pre><code>reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v TcpAckFrequency /t REG_DWORD /d 1 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v TCPNoDelay /t REG_DWORD /d 1 /f</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-actions">
+                    <button class="btn btn--outline" onclick="prevTab('system-specs')">
+                        ← Back: System Specs
+                    </button>
+                    <button class="btn btn--primary" onclick="nextTab('app-selection')">
+                        Next: Applications →
+                    </button>
+                </div>
+            </section>
+
+            <!-- Application Selection Tab -->
+            <section id="app-selection" class="tab-pane">
+                <div class="tab-header">
+                    <h2>Application Selection</h2>
+                    <p>Select applications to install via package managers</p>
+                </div>
+
+                <!-- Package Manager Status -->
+                <div class="package-manager-status">
+                    <h3>Package Manager Status</h3>
+                    <div class="status-grid">
+                        <div class="status-card">
+                            <span class="manager-icon">📦</span>
+                            <div class="status-info">
+                                <h4>Windows Package Manager (Winget)</h4>
+                                <span id="winget-status" class="status-badge">Checking...</span>
+                            </div>
+                            <button id="install-winget" class="btn btn--sm btn--outline hidden">Install</button>
+                        </div>
+                        <div class="status-card">
+                            <span class="manager-icon">🍫</span>
+                            <div class="status-info">
+                                <h4>Chocolatey</h4>
+                                <span id="choco-status" class="status-badge">Checking...</span>
+                            </div>
+                            <button id="install-choco" class="btn btn--sm btn--outline hidden">Install</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App Categories Filter -->
+                <div class="app-filter">
+                    <div class="filter-header">
+                        <h3>Categories</h3>
+                        <div class="filter-actions">
+                            <input type="text" id="app-search" class="form-control" placeholder="Search applications...">
+                        </div>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="productivity">Productivity</button>
+                        <button class="filter-btn" data-category="browsers">Browsers</button>
+                        <button class="filter-btn" data-category="development">Development</button>
+                        <button class="filter-btn" data-category="media">Media</button>
+                        <button class="filter-btn" data-category="gaming">Gaming</button>
+                        <button class="filter-btn" data-category="utilities">Utilities</button>
+                    </div>
+                </div>
+
+                <!-- Application Grid -->
+                <div class="app-sections">
+                    <!-- Productivity Apps -->
+                    <div class="app-section" data-category="productivity">
+                        <div class="section-header">
+                            <h3>📊 Productivity Applications</h3>
+                            <button class="btn btn--sm btn--outline select-all-btn" data-section="productivity">Select All</button>
+                        </div>
+                        <div class="app-grid" id="productivity-apps">
+                            <!-- Apps will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Browser Apps -->
+                    <div class="app-section" data-category="browsers">
+                        <div class="section-header">
+                            <h3>🌐 Web Browsers</h3>
+                            <button class="btn btn--sm btn--outline select-all-btn" data-section="browsers">Select All</button>
+                        </div>
+                        <div class="app-grid" id="browsers-apps">
+                            <!-- Apps will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Development Apps -->
+                    <div class="app-section" data-category="development">
+                        <div class="section-header">
+                            <h3>💻 Development Tools</h3>
+                            <button class="btn btn--sm btn--outline select-all-btn" data-section="development">Select All</button>
+                        </div>
+                        <div class="app-grid" id="development-apps">
+                            <!-- Apps will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Media Apps -->
+                    <div class="app-section" data-category="media">
+                        <div class="section-header">
+                            <h3>🎬 Media Applications</h3>
+                            <button class="btn btn--sm btn--outline select-all-btn" data-section="media">Select All</button>
+                        </div>
+                        <div class="app-grid" id="media-apps">
+                            <!-- Apps will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Gaming Apps -->
+                    <div class="app-section" data-category="gaming">
+                        <div class="section-header">
+                            <h3>🎮 Gaming Applications</h3>
+                            <button class="btn btn--sm btn--outline select-all-btn" data-section="gaming">Select All</button>
+                        </div>
+                        <div class="app-grid" id="gaming-apps">
+                            <!-- Apps will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Utilities Apps -->
+                    <div class="app-section" data-category="utilities">
+                        <div class="section-header">
+                            <h3>🔧 Utility Applications</h3>
+                            <button class="btn btn--sm btn--outline select-all-btn" data-section="utilities">Select All</button>
+                        </div>
+                        <div class="app-grid" id="utilities-apps">
+                            <!-- Apps will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-actions">
+                    <button class="btn btn--outline" onclick="prevTab('optimization-scripts')">
+                        ← Back: Scripts
+                    </button>
+                    <button class="btn btn--primary" onclick="nextTab('finalization')">
+                        Next: Finalization →
+                    </button>
+                </div>
+            </section>
+
+            <!-- Finalization Tab -->
+            <section id="finalization" class="tab-pane">
+                <div class="tab-header">
+                    <h2>Finalization</h2>
+                    <p>Review your selections and generate the complete setup</p>
+                </div>
+
+                <!-- Summary Sections -->
+                <div class="summary-grid">
+                    <!-- System Summary -->
+                    <div class="summary-card">
+                        <h3>🖥️ System Configuration</h3>
+                        <div id="final-system-summary" class="summary-content">
+                            <p>No system configuration selected</p>
+                        </div>
+                    </div>
+
+                    <!-- Scripts Summary -->
+                    <div class="summary-card">
+                        <h3>⚡ Optimization Scripts</h3>
+                        <div id="final-scripts-summary" class="summary-content">
+                            <p>No scripts selected</p>
+                        </div>
+                        <div class="summary-stats">
+                            <span>Selected Scripts: <strong id="scripts-count">0</strong></span>
+                            <span>Estimated Time: <strong id="scripts-time">0 min</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Apps Summary -->
+                    <div class="summary-card">
+                        <h3>📦 Applications</h3>
+                        <div id="final-apps-summary" class="summary-content">
+                            <p>No applications selected</p>
+                        </div>
+                        <div class="summary-stats">
+                            <span>Selected Apps: <strong id="apps-count">0</strong></span>
+                            <span>Download Size: <strong id="apps-size">0 MB</strong></span>
+                            <span>Install Time: <strong id="apps-time">0 min</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total Time Estimation -->
+                <div class="time-estimation">
+                    <h3>⏱️ Total Estimated Completion Time</h3>
+                    <div class="time-breakdown">
+                        <div class="time-item">
+                            <span class="time-label">Script Execution:</span>
+                            <span class="time-value" id="total-script-time">0 min</span>
+                        </div>
+                        <div class="time-item">
+                            <span class="time-label">App Downloads:</span>
+                            <span class="time-value" id="total-download-time">0 min</span>
+                        </div>
+                        <div class="time-item">
+                            <span class="time-label">App Installations:</span>
+                            <span class="time-value" id="total-install-time">0 min</span>
+                        </div>
+                        <div class="time-total">
+                            <span class="time-label">Total Time:</span>
+                            <span class="time-value" id="grand-total-time">0 minutes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Batch File Preview -->
+                <div class="batch-preview">
+                    <div class="preview-header">
+                        <h3>📄 Generated Batch File Preview</h3>
+                        <button id="toggle-preview" class="btn btn--outline btn--sm">Show Preview</button>
+                    </div>
+                    <div id="batch-content" class="batch-content hidden">
+                        <pre><code id="batch-code">Select items above to generate preview...</code></pre>
+                    </div>
+                </div>
+
+                <!-- Final Actions -->
+                <div class="final-actions">
+                    <div class="warning-notice">
+                        <h4>⚠️ Important Safety Notice</h4>
+                        <p>Before executing the generated batch file:</p>
+                        <ul>
+                            <li>Create a system restore point</li>
+                            <li>Close all running applications</li>
+                            <li>Run the batch file as Administrator</li>
+                            <li>Have your system backed up</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn--outline" onclick="prevTab('app-selection')">
+                            ← Back: Applications
+                        </button>
+                        <button id="generate-final-setup" class="btn btn--primary btn--lg">
+                            🚀 Generate Complete Setup
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Loading Overlay -->
+        <div id="loading-overlay" class="loading-overlay hidden">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <h3>Generating Complete Setup</h3>
+                <p id="loading-text">Preparing your custom optimization package...</p>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div id="success-modal" class="modal hidden">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <h3>✅ Setup Generated Successfully!</h3>
+                <p>Your complete Windows optimization and application installation package has been generated and downloaded.</p>
+                <div class="modal-actions">
+                    <button id="close-modal" class="btn btn--primary">Got it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

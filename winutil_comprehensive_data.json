@@ -1,0 +1,420 @@
+{
+  "applications": {
+    "Media": {
+      "VLC Media Player": {
+        "winget": "VideoLAN.VLC",
+        "choco": "vlc",
+        "description": "Cross-platform multimedia player and framework",
+        "install_time": {
+          "ssd": 30,
+          "hdd": 45
+        }
+      },
+      "Audacity": {
+        "winget": "Audacity.Audacity",
+        "choco": "audacity",
+        "description": "Free, open source, cross-platform audio software",
+        "install_time": {
+          "ssd": 25,
+          "hdd": 40
+        }
+      },
+      "OBS Studio": {
+        "winget": "OBSProject.OBSStudio",
+        "choco": "obs-studio",
+        "description": "Free and open source software for video recording and streaming",
+        "install_time": {
+          "ssd": 35,
+          "hdd": 50
+        }
+      },
+      "HandBrake": {
+        "winget": "HandBrake.HandBrake",
+        "choco": "handbrake",
+        "description": "Open-source video transcoder",
+        "install_time": {
+          "ssd": 20,
+          "hdd": 35
+        }
+      },
+      "Spotify": {
+        "winget": "Spotify.Spotify",
+        "choco": "spotify",
+        "description": "Digital music service",
+        "install_time": {
+          "ssd": 25,
+          "hdd": 40
+        }
+      }
+    },
+    "Development": {
+      "Visual Studio Code": {
+        "winget": "Microsoft.VisualStudioCode",
+        "choco": "vscode",
+        "description": "Lightweight but powerful source code editor",
+        "install_time": {
+          "ssd": 30,
+          "hdd": 45
+        }
+      },
+      "Git": {
+        "winget": "Git.Git",
+        "choco": "git",
+        "description": "Distributed version control system",
+        "install_time": {
+          "ssd": 15,
+          "hdd": 25
+        }
+      },
+      "Node.js": {
+        "winget": "OpenJS.NodeJS",
+        "choco": "nodejs",
+        "description": "JavaScript runtime built on Chrome's V8 engine",
+        "install_time": {
+          "ssd": 20,
+          "hdd": 30
+        }
+      },
+      "Python": {
+        "winget": "Python.Python.3.12",
+        "choco": "python",
+        "description": "Programming language",
+        "install_time": {
+          "ssd": 25,
+          "hdd": 40
+        }
+      },
+      "Docker Desktop": {
+        "winget": "Docker.DockerDesktop",
+        "choco": "docker-desktop",
+        "description": "Containerization platform",
+        "install_time": {
+          "ssd": 60,
+          "hdd": 90
+        }
+      }
+    },
+    "Gaming": {
+      "Steam": {
+        "winget": "Valve.Steam",
+        "choco": "steam",
+        "description": "Digital distribution platform for video games",
+        "install_time": {
+          "ssd": 40,
+          "hdd": 60
+        }
+      },
+      "Epic Games Launcher": {
+        "winget": "EpicGames.EpicGamesLauncher",
+        "choco": "epicgameslauncher",
+        "description": "Epic Games Store launcher",
+        "install_time": {
+          "ssd": 35,
+          "hdd": 50
+        }
+      },
+      "Discord": {
+        "winget": "Discord.Discord",
+        "choco": "discord",
+        "description": "Voice and text chat for gamers",
+        "install_time": {
+          "ssd": 30,
+          "hdd": 45
+        }
+      },
+      "MSI Afterburner": {
+        "winget": "Guru3D.Afterburner",
+        "choco": "msiafterburner",
+        "description": "Graphics card overclocking utility",
+        "install_time": {
+          "ssd": 20,
+          "hdd": 30
+        }
+      }
+    },
+    "Productivity": {
+      "Mozilla Firefox": {
+        "winget": "Mozilla.Firefox",
+        "choco": "firefox",
+        "description": "Free and open-source web browser",
+        "install_time": {
+          "ssd": 25,
+          "hdd": 40
+        }
+      },
+      "Google Chrome": {
+        "winget": "Google.Chrome",
+        "choco": "googlechrome",
+        "description": "Fast, secure web browser",
+        "install_time": {
+          "ssd": 30,
+          "hdd": 45
+        }
+      },
+      "7-Zip": {
+        "winget": "7zip.7zip",
+        "choco": "7zip",
+        "description": "File archiver with high compression ratio",
+        "install_time": {
+          "ssd": 15,
+          "hdd": 25
+        }
+      },
+      "Notepad++": {
+        "winget": "Notepad++.Notepad++",
+        "choco": "notepadplusplus",
+        "description": "Source code editor and Notepad replacement",
+        "install_time": {
+          "ssd": 20,
+          "hdd": 30
+        }
+      },
+      "Microsoft Office": {
+        "winget": "Microsoft.Office",
+        "choco": "microsoft-office-deployment",
+        "description": "Microsoft Office suite",
+        "install_time": {
+          "ssd": 120,
+          "hdd": 180
+        }
+      }
+    },
+    "Utilities": {
+      "CCleaner": {
+        "winget": "Piriform.CCleaner",
+        "choco": "ccleaner",
+        "description": "System cleaning utility",
+        "install_time": {
+          "ssd": 20,
+          "hdd": 30
+        }
+      },
+      "WinRAR": {
+        "winget": "RARLab.WinRAR",
+        "choco": "winrar",
+        "description": "Archive manager",
+        "install_time": {
+          "ssd": 15,
+          "hdd": 25
+        }
+      },
+      "Malwarebytes": {
+        "winget": "Malwarebytes.Malwarebytes",
+        "choco": "malwarebytes",
+        "description": "Anti-malware software",
+        "install_time": {
+          "ssd": 35,
+          "hdd": 50
+        }
+      },
+      "Everything": {
+        "winget": "voidtools.Everything",
+        "choco": "everything",
+        "description": "Locate files and folders by name instantly",
+        "install_time": {
+          "ssd": 10,
+          "hdd": 20
+        }
+      }
+    },
+    "Communication": {
+      "Zoom": {
+        "winget": "Zoom.Zoom",
+        "choco": "zoom",
+        "description": "Video conferencing software",
+        "install_time": {
+          "ssd": 30,
+          "hdd": 45
+        }
+      },
+      "Microsoft Teams": {
+        "winget": "Microsoft.Teams",
+        "choco": "microsoft-teams",
+        "description": "Collaboration platform",
+        "install_time": {
+          "ssd": 35,
+          "hdd": 50
+        }
+      },
+      "Slack": {
+        "winget": "SlackTechnologies.Slack",
+        "choco": "slack",
+        "description": "Team collaboration software",
+        "install_time": {
+          "ssd": 25,
+          "hdd": 40
+        }
+      }
+    }
+  },
+  "tweaks": {
+    "essential": {
+      "Disable Telemetry": {
+        "description": "Disables Windows telemetry and data collection services",
+        "category": "Privacy",
+        "safety_level": "Safe",
+        "script_type": "Registry + Services",
+        "execution_time": {
+          "fast_pc": 15,
+          "slow_pc": 30
+        },
+        "commands": [
+          "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f",
+          "sc config DiagTrack start= disabled",
+          "sc config dmwappushservice start= disabled"
+        ]
+      },
+      "Remove Bloatware": {
+        "description": "Removes pre-installed Microsoft Store apps",
+        "category": "Debloat",
+        "safety_level": "Safe",
+        "script_type": "PowerShell",
+        "execution_time": {
+          "fast_pc": 45,
+          "slow_pc": 90
+        },
+        "commands": [
+          "Get-AppxPackage *xbox* | Remove-AppxPackage",
+          "Get-AppxPackage *candy* | Remove-AppxPackage",
+          "Get-AppxPackage *bing* | Remove-AppxPackage"
+        ]
+      },
+      "Disable Cortana": {
+        "description": "Disables Cortana assistant",
+        "category": "Privacy",
+        "safety_level": "Safe",
+        "script_type": "Registry",
+        "execution_time": {
+          "fast_pc": 10,
+          "slow_pc": 20
+        },
+        "commands": [
+          "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v AllowCortana /t REG_DWORD /d 0 /f"
+        ]
+      },
+      "Disable Activity History": {
+        "description": "Disables Windows activity history tracking",
+        "category": "Privacy",
+        "safety_level": "Safe",
+        "script_type": "Registry",
+        "execution_time": {
+          "fast_pc": 5,
+          "slow_pc": 10
+        },
+        "commands": [
+          "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v EnableActivityFeed /t REG_DWORD /d 0 /f"
+        ]
+      },
+      "Disable Location Tracking": {
+        "description": "Turns off Windows location services",
+        "category": "Privacy",
+        "safety_level": "Safe",
+        "script_type": "Registry",
+        "execution_time": {
+          "fast_pc": 5,
+          "slow_pc": 10
+        },
+        "commands": [
+          "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CapabilityAccessManager\\ConsentStore\\location\" /v Value /t REG_SZ /d Deny /f"
+        ]
+      }
+    },
+    "recommended": {
+      "Ultimate Performance Mode": {
+        "description": "Enables Windows Ultimate Performance power plan",
+        "category": "Performance",
+        "safety_level": "Safe",
+        "script_type": "Command",
+        "execution_time": {
+          "fast_pc": 5,
+          "slow_pc": 10
+        },
+        "commands": [
+          "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61"
+        ]
+      },
+      "Disable Power Throttling": {
+        "description": "Disables CPU power throttling for better performance",
+        "category": "Performance",
+        "safety_level": "Safe",
+        "script_type": "Registry",
+        "execution_time": {
+          "fast_pc": 5,
+          "slow_pc": 10
+        },
+        "commands": [
+          "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\\PowerThrottling\" /v PowerThrottlingOff /t REG_DWORD /d 1 /f"
+        ]
+      },
+      "Classic Right-Click Menu": {
+        "description": "Restores Windows 10 style context menu",
+        "category": "Interface",
+        "safety_level": "Safe",
+        "script_type": "Registry",
+        "execution_time": {
+          "fast_pc": 5,
+          "slow_pc": 10
+        },
+        "commands": [
+          "reg add \"HKCU\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\\InprocServer32\" /f /ve"
+        ]
+      },
+      "Disable Web Search in Start": {
+        "description": "Removes Bing web search from Start menu",
+        "category": "Interface",
+        "safety_level": "Safe",
+        "script_type": "Registry",
+        "execution_time": {
+          "fast_pc": 5,
+          "slow_pc": 10
+        },
+        "commands": [
+          "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v BingSearchEnabled /t REG_DWORD /d 0 /f"
+        ]
+      },
+      "Gaming Mode Optimizations": {
+        "description": "Optimizes CPU and GPU scheduling for gaming",
+        "category": "Gaming",
+        "safety_level": "Safe",
+        "script_type": "Registry",
+        "execution_time": {
+          "fast_pc": 10,
+          "slow_pc": 20
+        },
+        "commands": [
+          "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"GPU Priority\" /t REG_DWORD /d 8 /f",
+          "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v Priority /t REG_DWORD /d 6 /f"
+        ]
+      }
+    },
+    "advanced": {
+      "Disable Windows Defender": {
+        "description": "Disables Windows Defender (USE WITH CAUTION)",
+        "category": "Security",
+        "safety_level": "Advanced",
+        "script_type": "Registry + Group Policy",
+        "execution_time": {
+          "fast_pc": 20,
+          "slow_pc": 40
+        },
+        "commands": [
+          "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\" /v DisableAntiSpyware /t REG_DWORD /d 1 /f"
+        ]
+      },
+      "Remove Windows Update": {
+        "description": "Completely disables Windows Updates (EXPERTS ONLY)",
+        "category": "Updates",
+        "safety_level": "Advanced",
+        "script_type": "Services + Registry",
+        "execution_time": {
+          "fast_pc": 15,
+          "slow_pc": 30
+        },
+        "commands": [
+          "sc config wuauserv start= disabled",
+          "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU\" /v NoAutoUpdate /t REG_DWORD /d 1 /f"
+        ]
+      }
+    }
+  }
+}
