@@ -78,13 +78,15 @@ class UnshittymyzerApp {
   getDefaultHardware() {
     return {
       cpu: {
-        'intel-i3-12100': { name: 'Intel i3-12100', score: 75, tier: 'budget' },
-        'intel-i5-12600k': { name: 'Intel i5-12600K', score: 85, tier: 'mainstream' },
-        'intel-i7-12700k': { name: 'Intel i7-12700K', score: 92, tier: 'high-end' },
-        'intel-i9-12900k': { name: 'Intel i9-12900K', score: 98, tier: 'enthusiast' },
-        'amd-ryzen5-5600x': { name: 'AMD Ryzen 5 5600X', score: 86, tier: 'mainstream' },
-        'amd-ryzen7-5800x': { name: 'AMD Ryzen 7 5800X', score: 93, tier: 'high-end' },
-        'amd-ryzen9-5900x': { name: 'AMD Ryzen 9 5900X', score: 97, tier: 'enthusiast' }
+        'i3': { name: 'INTEL i3 Series (Budget)', score: 75, tier: 'budget' },
+        'i5': { name: 'INTEL i5 Series (Mainstream)', score: 85, tier: 'mainstream' },
+        'i7': { name: 'INTEL i7 Series (High-End)', score: 92, tier: 'high-end' },
+        'i9': { name: 'INTEL i9 Series (Enthusiast)', score: 98, tier: 'enthusiast' },
+        'xeon': { name: 'Xeon (Professional)', score: 95, tier: 'enthusiast' },
+        'ryzen3': { name: 'Ryzen 3 (Budget)', score: 78, tier: 'budget' },
+        'ryzen5': { name: 'Ryzen 5 (Mainstream)', score: 86, tier: 'mainstream' },
+        'ryzen7': { name: 'Ryzen 7 (High-End)', score: 93, tier: 'high-end' },
+        'ryzen9': { name: 'Ryzen 9 (Enthusiast)', score: 97, tier: 'enthusiast' }
       },
       gpu: {
         'nvidia-rtx4090': { name: 'NVIDIA RTX 4090', tier: 'S', score: 100 },
