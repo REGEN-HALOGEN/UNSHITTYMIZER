@@ -1,0 +1,780 @@
+{
+  "hardware_database": {
+    "cpus": {
+      "intel": {
+        "i9-14900K": {
+          "score": 95,
+          "tier": "Enthusiast",
+          "cores": 24,
+          "base_clock": "3.2"
+        },
+        "i9-13900K": {
+          "score": 92,
+          "tier": "Enthusiast",
+          "cores": 24,
+          "base_clock": "3.0"
+        },
+        "i7-14700K": {
+          "score": 88,
+          "tier": "High-End",
+          "cores": 20,
+          "base_clock": "3.4"
+        },
+        "i7-13700K": {
+          "score": 85,
+          "tier": "High-End",
+          "cores": 16,
+          "base_clock": "3.4"
+        },
+        "i5-14600K": {
+          "score": 78,
+          "tier": "Mainstream",
+          "cores": 14,
+          "base_clock": "3.5"
+        },
+        "i5-13600K": {
+          "score": 75,
+          "tier": "Mainstream",
+          "cores": 14,
+          "base_clock": "3.5"
+        },
+        "i5-12600K": {
+          "score": 70,
+          "tier": "Mainstream",
+          "cores": 10,
+          "base_clock": "3.7"
+        },
+        "i3-13100": {
+          "score": 60,
+          "tier": "Budget",
+          "cores": 4,
+          "base_clock": "3.4"
+        },
+        "i3-12100": {
+          "score": 55,
+          "tier": "Budget",
+          "cores": 4,
+          "base_clock": "3.3"
+        }
+      },
+      "amd": {
+        "Ryzen 9 7950X": {
+          "score": 96,
+          "tier": "Enthusiast",
+          "cores": 16,
+          "base_clock": "4.5"
+        },
+        "Ryzen 9 7900X": {
+          "score": 90,
+          "tier": "High-End",
+          "cores": 12,
+          "base_clock": "4.7"
+        },
+        "Ryzen 7 7800X3D": {
+          "score": 88,
+          "tier": "High-End",
+          "cores": 8,
+          "base_clock": "4.2"
+        },
+        "Ryzen 7 7700X": {
+          "score": 82,
+          "tier": "High-End",
+          "cores": 8,
+          "base_clock": "4.5"
+        },
+        "Ryzen 5 7600X": {
+          "score": 75,
+          "tier": "Mainstream",
+          "cores": 6,
+          "base_clock": "4.7"
+        },
+        "Ryzen 5 5600X": {
+          "score": 68,
+          "tier": "Mainstream",
+          "cores": 6,
+          "base_clock": "3.7"
+        },
+        "Ryzen 3 5300G": {
+          "score": 50,
+          "tier": "Budget",
+          "cores": 4,
+          "base_clock": "4.0"
+        }
+      }
+    },
+    "gpus": {
+      "nvidia": {
+        "RTX 4090": {
+          "score": 98,
+          "tier": "Enthusiast",
+          "vram": "24GB",
+          "performance": "4K Ultra"
+        },
+        "RTX 4080": {
+          "score": 90,
+          "tier": "High-End",
+          "vram": "16GB",
+          "performance": "4K High"
+        },
+        "RTX 4070 Ti": {
+          "score": 83,
+          "tier": "High-End",
+          "vram": "12GB",
+          "performance": "1440p Ultra"
+        },
+        "RTX 4070": {
+          "score": 78,
+          "tier": "Mainstream",
+          "vram": "12GB",
+          "performance": "1440p High"
+        },
+        "RTX 4060 Ti": {
+          "score": 70,
+          "tier": "Mainstream",
+          "vram": "8GB",
+          "performance": "1080p Ultra"
+        },
+        "RTX 4060": {
+          "score": 65,
+          "tier": "Budget",
+          "vram": "8GB",
+          "performance": "1080p High"
+        },
+        "GTX 1660 Super": {
+          "score": 45,
+          "tier": "Budget",
+          "vram": "6GB",
+          "performance": "1080p Medium"
+        }
+      },
+      "amd": {
+        "RX 7900 XTX": {
+          "score": 88,
+          "tier": "High-End",
+          "vram": "24GB",
+          "performance": "4K High"
+        },
+        "RX 7900 XT": {
+          "score": 82,
+          "tier": "High-End",
+          "vram": "20GB",
+          "performance": "1440p Ultra"
+        },
+        "RX 7800 XT": {
+          "score": 75,
+          "tier": "Mainstream",
+          "vram": "16GB",
+          "performance": "1440p High"
+        },
+        "RX 7600": {
+          "score": 62,
+          "tier": "Budget",
+          "vram": "8GB",
+          "performance": "1080p High"
+        },
+        "RX 6600": {
+          "score": 55,
+          "tier": "Budget",
+          "vram": "8GB",
+          "performance": "1080p Medium"
+        }
+      },
+      "integrated": {
+        "Intel Iris Xe": {
+          "score": 25,
+          "tier": "Basic",
+          "vram": "Shared",
+          "performance": "720p Low"
+        },
+        "AMD Radeon Graphics": {
+          "score": 20,
+          "tier": "Basic",
+          "vram": "Shared",
+          "performance": "720p Low"
+        }
+      }
+    }
+  },
+  "optimization_scripts": {
+    "essential": {
+      "Disable Telemetry": {
+        "description": "Disables Windows telemetry and data collection",
+        "risk": "Low",
+        "category": "Privacy",
+        "recommended_for": [
+          "all"
+        ],
+        "execution_time": 15,
+        "script": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f\nsc config DiagTrack start= disabled\nsc config dmwappushservice start= disabled"
+      },
+      "Remove Bloatware": {
+        "description": "Removes pre-installed Microsoft Store apps",
+        "risk": "Low",
+        "category": "Debloat",
+        "recommended_for": [
+          "all"
+        ],
+        "execution_time": 60,
+        "script": "Get-AppxPackage *Xbox* | Remove-AppxPackage\nGet-AppxPackage *Candy* | Remove-AppxPackage\nGet-AppxPackage *BingNews* | Remove-AppxPackage\nGet-AppxPackage *GetHelp* | Remove-AppxPackage\nGet-AppxPackage *Getstarted* | Remove-AppxPackage"
+      },
+      "Disable Cortana": {
+        "description": "Disables Cortana assistant and search indexing",
+        "risk": "Low",
+        "category": "Privacy",
+        "recommended_for": [
+          "all"
+        ],
+        "execution_time": 10,
+        "script": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v AllowCortana /t REG_DWORD /d 0 /f"
+      },
+      "Classic Context Menu": {
+        "description": "Restores Windows 10 style right-click menu",
+        "risk": "Low",
+        "category": "Interface",
+        "recommended_for": [
+          "all"
+        ],
+        "execution_time": 5,
+        "script": "reg add \"HKCU\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\\InprocServer32\" /f /ve"
+      }
+    },
+    "performance": {
+      "Ultimate Performance Mode": {
+        "description": "Enables Windows Ultimate Performance power plan",
+        "risk": "Low",
+        "category": "Performance",
+        "recommended_for": [
+          "Desktop",
+          "High-End",
+          "Enthusiast"
+        ],
+        "execution_time": 5,
+        "script": "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61"
+      },
+      "Gaming Optimizations": {
+        "description": "Optimizes CPU and GPU scheduling for gaming",
+        "risk": "Low",
+        "category": "Gaming",
+        "recommended_for": [
+          "Mainstream",
+          "High-End",
+          "Enthusiast"
+        ],
+        "execution_time": 10,
+        "script": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"GPU Priority\" /t REG_DWORD /d 8 /f\nreg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v Priority /t REG_DWORD /d 6 /f"
+      },
+      "Disable Power Throttling": {
+        "description": "Disables CPU power throttling for better performance",
+        "risk": "Medium",
+        "category": "Performance",
+        "recommended_for": [
+          "Desktop",
+          "High-End",
+          "Enthusiast"
+        ],
+        "execution_time": 5,
+        "script": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\\PowerThrottling\" /v PowerThrottlingOff /t REG_DWORD /d 1 /f"
+      },
+      "Network Optimization": {
+        "description": "Optimizes network settings for maximum throughput",
+        "risk": "Medium",
+        "category": "Network",
+        "recommended_for": [
+          "Mainstream",
+          "High-End",
+          "Enthusiast"
+        ],
+        "execution_time": 15,
+        "script": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v NetworkThrottlingIndex /t REG_DWORD /d 0xffffffff /f\nnetsh int tcp set global autotuninglevel=normal"
+      }
+    },
+    "advanced": {
+      "Disable Windows Defender": {
+        "description": "Disables Windows Defender real-time protection",
+        "risk": "High",
+        "category": "Security",
+        "recommended_for": [],
+        "execution_time": 20,
+        "script": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\" /v DisableAntiSpyware /t REG_DWORD /d 1 /f"
+      },
+      "Disable Windows Updates": {
+        "description": "Completely disables automatic Windows Updates",
+        "risk": "High",
+        "category": "Updates",
+        "recommended_for": [],
+        "execution_time": 15,
+        "script": "sc config wuauserv start= disabled\nreg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU\" /v NoAutoUpdate /t REG_DWORD /d 1 /f"
+      }
+    }
+  },
+  "application_catalog": {
+    "Productivity": [
+      {
+        "name": "Microsoft Office 365",
+        "winget": "Microsoft.Office",
+        "choco": "microsoft-office-deployment",
+        "description": "Complete office suite",
+        "size": "4.5GB",
+        "install_time": 300
+      },
+      {
+        "name": "LibreOffice",
+        "winget": "TheDocumentFoundation.LibreOffice",
+        "choco": "libreoffice-fresh",
+        "description": "Free office suite",
+        "size": "350MB",
+        "install_time": 120
+      },
+      {
+        "name": "Notion",
+        "winget": "Notion.Notion",
+        "choco": "notion",
+        "description": "All-in-one workspace",
+        "size": "150MB",
+        "install_time": 60
+      },
+      {
+        "name": "Obsidian",
+        "winget": "Obsidian.Obsidian",
+        "choco": "obsidian",
+        "description": "Knowledge management tool",
+        "size": "120MB",
+        "install_time": 45
+      },
+      {
+        "name": "Slack",
+        "winget": "SlackTechnologies.Slack",
+        "choco": "slack",
+        "description": "Team collaboration",
+        "size": "200MB",
+        "install_time": 90
+      },
+      {
+        "name": "Microsoft Teams",
+        "winget": "Microsoft.Teams",
+        "choco": "microsoft-teams",
+        "description": "Video conferencing",
+        "size": "300MB",
+        "install_time": 120
+      },
+      {
+        "name": "Zoom",
+        "winget": "Zoom.Zoom",
+        "choco": "zoom",
+        "description": "Video meetings",
+        "size": "180MB",
+        "install_time": 75
+      },
+      {
+        "name": "Adobe Acrobat Reader",
+        "winget": "Adobe.Acrobat.Reader.64-bit",
+        "choco": "adobereader",
+        "description": "PDF reader",
+        "size": "250MB",
+        "install_time": 90
+      },
+      {
+        "name": "Foxit PDF Reader",
+        "winget": "Foxit.FoxitReader",
+        "choco": "foxitreader",
+        "description": "Alternative PDF reader",
+        "size": "180MB",
+        "install_time": 60
+      },
+      {
+        "name": "Grammarly",
+        "winget": "Grammarly.Grammarly",
+        "choco": "grammarly",
+        "description": "Writing assistant",
+        "size": "120MB",
+        "install_time": 45
+      }
+    ],
+    "Browsers": [
+      {
+        "name": "Google Chrome",
+        "winget": "Google.Chrome",
+        "choco": "googlechrome",
+        "description": "Fast web browser",
+        "size": "150MB",
+        "install_time": 60
+      },
+      {
+        "name": "Mozilla Firefox",
+        "winget": "Mozilla.Firefox",
+        "choco": "firefox",
+        "description": "Privacy-focused browser",
+        "size": "200MB",
+        "install_time": 75
+      },
+      {
+        "name": "Microsoft Edge",
+        "winget": "Microsoft.Edge",
+        "choco": "microsoft-edge",
+        "description": "Modern web browser",
+        "size": "180MB",
+        "install_time": 60
+      },
+      {
+        "name": "Opera",
+        "winget": "Opera.Opera",
+        "choco": "opera",
+        "description": "Feature-rich browser",
+        "size": "120MB",
+        "install_time": 45
+      },
+      {
+        "name": "Brave Browser",
+        "winget": "Brave.Brave",
+        "choco": "brave",
+        "description": "Privacy-first browser",
+        "size": "180MB",
+        "install_time": 60
+      },
+      {
+        "name": "Vivaldi",
+        "winget": "VivaldiTechnologies.Vivaldi",
+        "choco": "vivaldi",
+        "description": "Customizable browser",
+        "size": "200MB",
+        "install_time": 75
+      },
+      {
+        "name": "Tor Browser",
+        "winget": "TorProject.TorBrowser",
+        "choco": "tor-browser",
+        "description": "Anonymous browsing",
+        "size": "150MB",
+        "install_time": 60
+      }
+    ],
+    "Development": [
+      {
+        "name": "Visual Studio Code",
+        "winget": "Microsoft.VisualStudioCode",
+        "choco": "vscode",
+        "description": "Code editor",
+        "size": "85MB",
+        "install_time": 45
+      },
+      {
+        "name": "Git",
+        "winget": "Git.Git",
+        "choco": "git",
+        "description": "Version control",
+        "size": "50MB",
+        "install_time": 30
+      },
+      {
+        "name": "Node.js",
+        "winget": "OpenJS.NodeJS",
+        "choco": "nodejs",
+        "description": "JavaScript runtime",
+        "size": "50MB",
+        "install_time": 30
+      },
+      {
+        "name": "Python",
+        "winget": "Python.Python.3.12",
+        "choco": "python",
+        "description": "Programming language",
+        "size": "28MB",
+        "install_time": 30
+      },
+      {
+        "name": "Docker Desktop",
+        "winget": "Docker.DockerDesktop",
+        "choco": "docker-desktop",
+        "description": "Containerization",
+        "size": "500MB",
+        "install_time": 180
+      },
+      {
+        "name": "Postman",
+        "winget": "Postman.Postman",
+        "choco": "postman",
+        "description": "API testing",
+        "size": "200MB",
+        "install_time": 75
+      },
+      {
+        "name": "GitHub Desktop",
+        "winget": "GitHub.GitHubDesktop",
+        "choco": "github-desktop",
+        "description": "Git GUI client",
+        "size": "120MB",
+        "install_time": 45
+      },
+      {
+        "name": "Android Studio",
+        "winget": "Google.AndroidStudio",
+        "choco": "androidstudio",
+        "description": "Android development",
+        "size": "3GB",
+        "install_time": 600
+      },
+      {
+        "name": "IntelliJ IDEA",
+        "winget": "JetBrains.IntelliJIDEA.Community",
+        "choco": "intellijidea-community",
+        "description": "Java IDE",
+        "size": "800MB",
+        "install_time": 240
+      },
+      {
+        "name": "Sublime Text",
+        "winget": "SublimeHQ.SublimeText.4",
+        "choco": "sublimetext4",
+        "description": "Text editor",
+        "size": "25MB",
+        "install_time": 20
+      }
+    ],
+    "Media": [
+      {
+        "name": "VLC Media Player",
+        "winget": "VideoLAN.VLC",
+        "choco": "vlc",
+        "description": "Universal media player",
+        "size": "100MB",
+        "install_time": 45
+      },
+      {
+        "name": "Spotify",
+        "winget": "Spotify.Spotify",
+        "choco": "spotify",
+        "description": "Music streaming",
+        "size": "150MB",
+        "install_time": 60
+      },
+      {
+        "name": "OBS Studio",
+        "winget": "OBSProject.OBSStudio",
+        "choco": "obs-studio",
+        "description": "Streaming software",
+        "size": "350MB",
+        "install_time": 120
+      },
+      {
+        "name": "Audacity",
+        "winget": "Audacity.Audacity",
+        "choco": "audacity",
+        "description": "Audio editor",
+        "size": "40MB",
+        "install_time": 30
+      },
+      {
+        "name": "HandBrake",
+        "winget": "HandBrake.HandBrake",
+        "choco": "handbrake",
+        "description": "Video transcoder",
+        "size": "25MB",
+        "install_time": 20
+      },
+      {
+        "name": "GIMP",
+        "winget": "GIMP.GIMP",
+        "choco": "gimp",
+        "description": "Image editor",
+        "size": "300MB",
+        "install_time": 120
+      },
+      {
+        "name": "Blender",
+        "winget": "BlenderFoundation.Blender",
+        "choco": "blender",
+        "description": "3D creation suite",
+        "size": "400MB",
+        "install_time": 150
+      },
+      {
+        "name": "Adobe Photoshop",
+        "winget": "Adobe.CreativeCloud",
+        "choco": "adobe-creative-cloud",
+        "description": "Image editing",
+        "size": "2GB",
+        "install_time": 400
+      },
+      {
+        "name": "DaVinci Resolve",
+        "winget": "Blackmagic.DaVinciResolve",
+        "choco": "davinci-resolve",
+        "description": "Video editor",
+        "size": "3.5GB",
+        "install_time": 600
+      },
+      {
+        "name": "Krita",
+        "winget": "KDE.Krita",
+        "choco": "krita",
+        "description": "Digital painting",
+        "size": "200MB",
+        "install_time": 75
+      }
+    ],
+    "Gaming": [
+      {
+        "name": "Steam",
+        "winget": "Valve.Steam",
+        "choco": "steam",
+        "description": "Gaming platform",
+        "size": "10MB",
+        "install_time": 30
+      },
+      {
+        "name": "Epic Games Launcher",
+        "winget": "EpicGames.EpicGamesLauncher",
+        "choco": "epicgameslauncher",
+        "description": "Epic Games store",
+        "size": "250MB",
+        "install_time": 90
+      },
+      {
+        "name": "Discord",
+        "winget": "Discord.Discord",
+        "choco": "discord",
+        "description": "Gaming communication",
+        "size": "150MB",
+        "install_time": 60
+      },
+      {
+        "name": "MSI Afterburner",
+        "winget": "Guru3D.Afterburner",
+        "choco": "msiafterburner",
+        "description": "GPU overclocking",
+        "size": "40MB",
+        "install_time": 30
+      },
+      {
+        "name": "NVIDIA GeForce Experience",
+        "winget": "Nvidia.GeForceExperience",
+        "choco": "geforce-experience",
+        "description": "GPU drivers",
+        "size": "800MB",
+        "install_time": 240
+      },
+      {
+        "name": "AMD Software",
+        "winget": "AMD.AMDSoftware",
+        "choco": "amd-software",
+        "description": "AMD GPU drivers",
+        "size": "600MB",
+        "install_time": 180
+      },
+      {
+        "name": "Origin",
+        "winget": "ElectronicArts.EADesktop",
+        "choco": "origin",
+        "description": "EA games launcher",
+        "size": "200MB",
+        "install_time": 75
+      },
+      {
+        "name": "Ubisoft Connect",
+        "winget": "Ubisoft.Connect",
+        "choco": "uplay",
+        "description": "Ubisoft launcher",
+        "size": "150MB",
+        "install_time": 60
+      },
+      {
+        "name": "Battle.net",
+        "winget": "Blizzard.BattleNet",
+        "choco": "battle.net",
+        "description": "Blizzard launcher",
+        "size": "120MB",
+        "install_time": 45
+      },
+      {
+        "name": "GOG Galaxy",
+        "winget": "GOG.Galaxy",
+        "choco": "goggalaxy",
+        "description": "GOG games launcher",
+        "size": "100MB",
+        "install_time": 45
+      }
+    ],
+    "Utilities": [
+      {
+        "name": "7-Zip",
+        "winget": "7zip.7zip",
+        "choco": "7zip",
+        "description": "File archiver",
+        "size": "5MB",
+        "install_time": 15
+      },
+      {
+        "name": "WinRAR",
+        "winget": "RARLab.WinRAR",
+        "choco": "winrar",
+        "description": "Archive manager",
+        "size": "8MB",
+        "install_time": 20
+      },
+      {
+        "name": "CCleaner",
+        "winget": "Piriform.CCleaner",
+        "choco": "ccleaner",
+        "description": "System cleaner",
+        "size": "50MB",
+        "install_time": 30
+      },
+      {
+        "name": "Malwarebytes",
+        "winget": "Malwarebytes.Malwarebytes",
+        "choco": "malwarebytes",
+        "description": "Anti-malware",
+        "size": "120MB",
+        "install_time": 45
+      },
+      {
+        "name": "Everything",
+        "winget": "voidtools.Everything",
+        "choco": "everything",
+        "description": "File search",
+        "size": "5MB",
+        "install_time": 15
+      },
+      {
+        "name": "PowerToys",
+        "winget": "Microsoft.PowerToys",
+        "choco": "powertoys",
+        "description": "Windows utilities",
+        "size": "200MB",
+        "install_time": 75
+      },
+      {
+        "name": "Process Monitor",
+        "winget": "Microsoft.Sysinternals.ProcessMonitor",
+        "choco": "procmon",
+        "description": "System monitoring",
+        "size": "2MB",
+        "install_time": 10
+      },
+      {
+        "name": "CPU-Z",
+        "winget": "CPUID.CPU-Z",
+        "choco": "cpu-z",
+        "description": "Hardware info",
+        "size": "5MB",
+        "install_time": 15
+      },
+      {
+        "name": "GPU-Z",
+        "winget": "TechPowerUp.GPU-Z",
+        "choco": "gpu-z",
+        "description": "GPU monitoring",
+        "size": "8MB",
+        "install_time": 20
+      },
+      {
+        "name": "CrystalDiskInfo",
+        "winget": "CrystalDewWorld.CrystalDiskInfo",
+        "choco": "crystaldiskinfo",
+        "description": "Disk health",
+        "size": "10MB",
+        "install_time": 20
+      }
+    ]
+  }
+}
