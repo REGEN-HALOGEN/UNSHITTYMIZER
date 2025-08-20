@@ -56,13 +56,19 @@
                             <label class="form-label" for="cpu-select">Select CPU</label>
                             <select id="cpu-select" class="form-control">
                                 <option value="">Choose CPU...</option>
-                                <option value="intel-i3-12100">Intel i3-12100 (Budget)</option>
-                                <option value="intel-i5-12600k">Intel i5-12600K (Mainstream)</option>
-                                <option value="intel-i7-12700k">Intel i7-12700K (High-End)</option>
-                                <option value="intel-i9-12900k">Intel i9-12900K (Enthusiast)</option>
-                                <option value="amd-ryzen5-5600x">AMD Ryzen 5 5600X (Mainstream)</option>
-                                <option value="amd-ryzen7-5800x">AMD Ryzen 7 5800X (High-End)</option>
-                                <option value="amd-ryzen9-5900x">AMD Ryzen 9 5900X (Enthusiast)</option>
+                                <optgroup label="Intel">
+                                    <option value="i3">INTEL i3 Series (Budget)</option>
+                                    <option value="i5">INTEL i5 Series (Mainstream)</option>
+                                    <option value="i7">INTEL i7 Series (High-End)</option>
+                                    <option value="i9">INTEL i9 Series (Enthusiast)</option>
+                                    <option value="xeon">Xeon (Professional)</option>
+                                </optgroup>
+                                <optgroup label="AMD">
+                                    <option value="ryzen3">Ryzen 3 (Budget)</option>
+                                    <option value="ryzen5">Ryzen 5 (Mainstream)</option>
+                                    <option value="ryzen7">Ryzen 7 (High-End)</option>
+                                    <option value="ryzen9">Ryzen 9 (Enthusiast)</option>
+                                </optgroup>
                             </select>
                             <div id="cpu-performance" class="performance-display">
                                 <span class="performance-score">Performance Score: --</span>
